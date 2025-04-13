@@ -37,7 +37,9 @@ $bp-desktop: 1440px;
     }
 }
 
-
+html {    
+    font-size: clamp(1rem, 1vw + 0.4rem, 5rem);
+}
 
 .text-preset-1 {
     font-family: $font-poppins;
