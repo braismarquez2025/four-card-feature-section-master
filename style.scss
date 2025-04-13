@@ -4,7 +4,14 @@ $red: #EA5454;
 $cyan: #44D3D2;
 $blue: #549EF2;
 $orange: #FCAE4A;
+$sombra: -2px 2px 8px rgba(0, 0, 0, 0.1),   // lado izquierdo
+2px 2px 8px rgba(0, 0, 0, 0.1),    // lado derecho
+0px 8px 16px rgba(0, 0, 0, 0.15);  // lado inferior
+
 $font-poppins: 'Poppins', sans-serif;
+
+$bp-tablet: 768px;
+$bp-desktop: 1440px;
 
 @use "sass:math";
 
@@ -16,10 +23,27 @@ $font-poppins: 'Poppins', sans-serif;
     }
 }
 
+@mixin breakpoint($bp) {
+    @if $bp == tablet {
+      @media (min-width: $bp-tablet) {
+        @content;
+      }
+    }
+  
+    @if $bp == desktop {
+      @media (min-width: $bp-desktop) {
+        @content;
+      }
+    }
+}
+
+html {    
+    font-size: clamp(1rem, 1vw + 0.5rem, 5rem);
+}
 
 .text-preset-1 {
     font-family: $font-poppins;
-    font-size: rem(36);
+    font-size: rem(24);
     line-height: 140%;
     letter-spacing: rem(0.25);
     font-weight: 600;
@@ -28,7 +52,7 @@ $font-poppins: 'Poppins', sans-serif;
 
 .text-preset-2 {
     font-family: $font-poppins;
-    font-size: rem(36);
+    font-size: rem(24);
     line-height: 140%;
     letter-spacing: rem(0.25);
     color: $grey-500;
@@ -60,4 +84,167 @@ $font-poppins: 'Poppins', sans-serif;
     letter-spacing: 0px;
     color: $grey-500;
     font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-left: rem(30);
+    margin-right: rem(30);
+    background-color: #FAFAFA;
+
+    @include breakpoint(tablet) {
+        margin-left: rem(54);
+        margin-right: rem(54);
+    }
+}
+
+.container {
+    &_header{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: rem(56);
+        margin-bottom: rem(60);
+
+        
+
+        &-description {
+            margin-top: rem(16);
+            text-align: center;
+
+            @include breakpoint(tablet) {
+                width: rem(500);
+                
+            }
+        }
+    }
+
+    &_item {
+        @include breakpoint(desktop) {
+            display: flex;
+            align-items: center;
+            gap: rem(32);
+
+        }
+        
+        &-1{
+            background-color: white;
+            width: rem(314);
+            height: rem(250);
+            border-radius: rem(8);
+            display: flex;
+            flex-direction: column;
+            padding: rem(32);
+            margin-bottom: rem(32);
+            box-shadow: 0px -4px 0px $cyan, $sombra;
+
+            @include breakpoint(tablet) {
+                justify-self: center;
+            }
+
+            &-title {
+                margin-bottom: 6px;
+            }
+
+            &-img {
+                width: rem(64);
+                height: rem(64);
+                margin-top: rem(32);
+                margin-left: auto;
+            }
+        }
+
+        &-grid {
+            @include breakpoint(tablet) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: rem(32);
+            }
+
+            @include breakpoint(desktop) {
+                grid-template-columns: auto;
+                grid-template-rows: repeat(2, 1fr);
+            
+            }
+        }
+
+
+        &-2{
+            background-color: white;
+            width: rem(314);
+            height: rem(250);
+            border-radius: rem(8);
+            display: flex;
+            flex-direction: column;
+            padding: rem(32);
+            margin-bottom: rem(32);
+            box-shadow: 0px -4px 0px $red, $sombra;
+
+            &-title {
+                margin-bottom: 6px;
+            }
+
+            &-img {
+                width: rem(64);
+                height: rem(64);
+                margin-top: rem(32);
+                margin-left: auto;
+            }
+        }
+
+        &-3{
+            background-color: white;
+            width: rem(314);
+            height: rem(250);
+            border-radius: rem(8);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px -4px 0px $orange, $sombra;
+            padding: rem(32);
+            margin-bottom: rem(32);
+            &-title {
+                margin-bottom: 6px;
+            }
+
+            &-img {
+                width: rem(64);
+                height: rem(64);
+                margin-top: rem(32);
+                margin-left: auto;
+            }
+        }
+
+        &-4{
+            background-color: white;
+            width: rem(314);
+            height: rem(250);
+            border-radius: rem(8);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px -4px 0px $blue, $sombra;
+            padding: rem(32);
+            margin-bottom: rem(32);
+
+            @include breakpoint(tablet) {
+                justify-self: center;   
+            }
+
+            &-title {
+                margin-bottom: 6px;
+            }
+
+            &-img {
+                width: rem(64);
+                height: rem(64);
+                margin-top: rem(32);
+                margin-left: auto;
+            }
+        }
+    }
 }
