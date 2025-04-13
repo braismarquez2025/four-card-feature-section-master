@@ -37,9 +37,7 @@ $bp-desktop: 1440px;
     }
 }
 
-html {    
-    font-size: clamp(1rem, 1vw + 0.5rem, 5rem);
-}
+
 
 .text-preset-1 {
     font-family: $font-poppins;
@@ -119,8 +117,7 @@ body {
             text-align: center;
 
             @include breakpoint(tablet) {
-                width: rem(500);
-                
+                width: rem(450);
             }
         }
     }
