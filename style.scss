@@ -48,6 +48,14 @@ html {
     letter-spacing: rem(0.25);
     font-weight: 600;
     color: $grey-500;
+
+    @include breakpoint(tablet) {
+        font-size: rem(32);
+    }
+
+    @include breakpoint(desktop) {
+        font-size: rem(36);
+    }
 }
 
 .text-preset-2 {
@@ -57,6 +65,14 @@ html {
     letter-spacing: rem(0.25);
     color: $grey-500;
     font-weight: 200;
+
+    @include breakpoint(tablet) {
+        font-size: rem(32);
+    }
+
+    @include breakpoint(desktop) {
+        font-size: rem(36);
+    }
 }
 
 .text-preset-3 {
@@ -119,9 +135,46 @@ body {
             text-align: center;
 
             @include breakpoint(tablet) {
-                width: rem(450);
+                width: 70%;
+            }
+
+            @include breakpoint(desktop) {
+                width: 50%;
             }
         }
+    }
+
+    .box {
+        background-color: white;
+        width: rem(314);
+        height: rem(250);
+        border-radius: rem(8);
+        display: flex;
+        flex-direction: column;
+        padding: rem(32);
+        margin-bottom: rem(32);
+
+        @include breakpoint(desktop) {
+            width: rem(350);
+            height: rem(250);
+        }
+
+        &-no-margin {
+            @include breakpoint(desktop) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .img {
+        width: rem(64);
+        height: rem(64);
+        margin-top: rem(32);
+        margin-left: auto;
+    }
+
+    .title {
+        margin-bottom: 6px;
     }
 
     &_item {
@@ -133,30 +186,12 @@ body {
         }
         
         &-1{
-            background-color: white;
-            width: rem(314);
-            height: rem(250);
-            border-radius: rem(8);
-            display: flex;
-            flex-direction: column;
-            padding: rem(32);
-            margin-bottom: rem(32);
             box-shadow: 0px -4px 0px $cyan, $sombra;
 
             @include breakpoint(tablet) {
                 justify-self: center;
             }
 
-            &-title {
-                margin-bottom: 6px;
-            }
-
-            &-img {
-                width: rem(64);
-                height: rem(64);
-                margin-top: rem(32);
-                margin-left: auto;
-            }
         }
 
         &-grid {
@@ -168,82 +203,29 @@ body {
 
             @include breakpoint(desktop) {
                 grid-template-columns: auto;
-                grid-template-rows: repeat(2, 1fr);
-            
+                grid-template-rows: repeat(2, auto);
             }
         }
 
 
         &-2{
-            background-color: white;
-            width: rem(314);
-            height: rem(250);
-            border-radius: rem(8);
-            display: flex;
-            flex-direction: column;
-            padding: rem(32);
-            margin-bottom: rem(32);
-            box-shadow: 0px -4px 0px $red, $sombra;
-
-            &-title {
-                margin-bottom: 6px;
-            }
-
-            &-img {
-                width: rem(64);
-                height: rem(64);
-                margin-top: rem(32);
-                margin-left: auto;
-            }
+            box-shadow: 0px -4px 0px $red, $sombra        
         }
 
         &-3{
-            background-color: white;
-            width: rem(314);
-            height: rem(250);
-            border-radius: rem(8);
-            display: flex;
-            flex-direction: column;
             box-shadow: 0px -4px 0px $orange, $sombra;
-            padding: rem(32);
-            margin-bottom: rem(32);
-            &-title {
-                margin-bottom: 6px;
-            }
-
-            &-img {
-                width: rem(64);
-                height: rem(64);
-                margin-top: rem(32);
-                margin-left: auto;
-            }
+  
         }
 
+
         &-4{
-            background-color: white;
-            width: rem(314);
-            height: rem(250);
-            border-radius: rem(8);
-            display: flex;
-            flex-direction: column;
             box-shadow: 0px -4px 0px $blue, $sombra;
-            padding: rem(32);
-            margin-bottom: rem(32);
+
 
             @include breakpoint(tablet) {
                 justify-self: center;   
             }
 
-            &-title {
-                margin-bottom: 6px;
-            }
-
-            &-img {
-                width: rem(64);
-                height: rem(64);
-                margin-top: rem(32);
-                margin-left: auto;
-            }
         }
     }
 }
