@@ -1,6 +1,6 @@
 # Frontend Mentor - Solución de componentes de código QR
 
-Esta es una solución al [desafío del componente de código QR en Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). Los desafíos de Frontend Mentor te ayudan a mejorar tus habilidades de programación creando proyectos realistas.
+Esta es una solución al [desafío de sección de página en Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Los desafíos de Frontend Mentor te ayudan a mejorar tus habilidades de programación creando proyectos realistas.
 
 ## Tabla de contenido
 
@@ -14,12 +14,12 @@ Esta es una solución al [desafío del componente de código QR en Frontend Ment
 ## Descripción general
 
 ### Captura de pantalla
-![](./assets/images/Frontend-Mentor-Recipe-page-04-20-2025_09_22_PM.png)
+![](./images/Frontend-Mentor-Four-card-feature-section-04-21-2025_12_29_PM.png)
 
 
 ### Links
-- [URL de la solución](https://www.frontendmentor.io/solutions/men-navegable-de-pgina-web-html-y-css-vUgVs_SLAZ)
-- [URL del sitio en vivo](https://braismarquez2025.github.io/social-links-profile-main/)
+- [URL de la solución](https://www.frontendmentor.io/solutions/seccin-de-pgina-con-html-y-css-sKRffeDl_f)
+- [URL del sitio en vivo](https://braismarquez2025.github.io/four-card-feature-section-master/)
 
 
 ## Mi proceso
