@@ -1,4 +1,4 @@
-# Frontend Mentor - Solución de componentes de código QR
+# Frontend Mentor - Solución de sección de página 
 
 Esta es una solución al [desafío de sección de página en Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Los desafíos de Frontend Mentor te ayudan a mejorar tus habilidades de programación creando proyectos realistas.
 
